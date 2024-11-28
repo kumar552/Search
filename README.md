@@ -1,0 +1,1 @@
+I have created a simple HTML file named as Search by performing search actions of various sites like facebook, youtube, google, bing, amazon, flipkart, etc and also used google translator which takes input and redirect to the original websites inside their search query.
