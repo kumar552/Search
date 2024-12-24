@@ -4,47 +4,430 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search with me</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #a9a9a9;
+        }
+
+        .outer-section {
+            background-color: gray; 
+            text-align: center; 
+            margin: auto; 
+            padding: 10px; 
+            max-width: 100%;
+        }
+
+        h1 {
+            display:inline-block;
+            padding: 1px 9px;
+            border: 2px solid #222222;
+            text-shadow: -2px -2px 5px #393939;
+            box-shadow: 0 0 5px 5px #393939;
+        }
+        
+        .hero-section {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            row-gap: 25px;
+            column-gap: 25px;
+        }
+
+        .hero-section>div {
+            width: 280px;
+            min-height: 200px;
+            padding-block: 5px;
+            flex-shrink: 1;
+            border-color: #808080;
+            box-shadow: 0px 0px 10px 5px #393939;
+            border-radius: 15px;
+            /* text-align: center; */
+        }
+
+        input, .item select {
+            background-color: #bababa;
+            border: none;
+        }
+
+        .wide {
+            display: flex;
+            padding-inline: 25px;
+            max-width: 465px;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2px;
+            flex-grow: 1;
+        }
+
+        .wide h2, .wide h3 {
+            margin-block: 0px 0px;
+        }
+
+        /* .wide h3 {
+            margin-block: 2px 10px;
+        } */
+
+        .mentor {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .frontendmentor {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .frontendbutton {
+            width: 10rem;
+            padding: 4px 15px;
+            margin-top: 4px;
+            background-color: #a9a9a9;
+            /* box-shadow: 2px 4px 10px 4px #393939; */
+            align-self: flex-start;
+            justify-self: flex-start;
+        }
+    </style>
 </head>
-<body style="background-color: darkgray;">
-    <div style="background-color: gray; text-align: center; margin: auto; padding: 10px; max-width: 500px;">
+<body>
+    <div class="outer-section">
     <h1>Search wherever you want</h1>
-    <h2>Search Engine</h2>
-    <p><form action="https://www.google.com/search" target="_blank">
-        <div><label for="google">Search Google</label></div>
-        <input id="google" type="text" name="q">
-    </form></p>
-    <p><form action="https://www.bing.com/search" role="search" target="_blank">
-        <div><label for="bing">Search Bing</label></div>
-        <input id="bing" type="text" name="q">
-    </form></p>    
-    <h2>Ecommerce</h2>
-    <p><form action="https://www.flipkart.com/search" role="search" target="_blank">
-        <div><label for="flipkart">Search Flipkart</label></div>
-        <input id="flipkart" type="text" name="q">
-    </form></p>    
-    <p><form action="https://www.amazon.in/s" role="search" target="_blank">
-        <div><label for="Amazon">Search Amazon</label></div>
-        <input id="Amazon" type="text" name="k">
-    </form></p> 
-    <h2>Facebook and Youtube</h2>   
-    <p><form action="https://www.facebook.com/search/top/" target="_blank">
-        <div><label for="fb">Search Facebook</label></div>
-        <input id="fb" type="text" name="q">
-    </form></p>
-    <p><form action="https://www.youtube.com/results" target="_blank">
-        <div><label for="YT">Search YouTube</label></div>
-        <input id="YT" type="text" name="search_query">
-    </form></p>
-    <h2>Google Translator</h2>
-    <p><form action="https://translate.google.com" target="_blank">
-        <input type="hidden" name="hl" value="en" >
-        <input type="hidden" name="tab" value="TT" >
-        <input type="hidden" name="sl" value="auto" >
-        <input type="hidden" name="tl" value="ne" >
-        <div><label for="nepali">Translate to Nepali</label></div>
-        <input id="nepali" type="text" name="text">
-        <input type="hidden" name="op" value="translate" >
-    </form></p>
+    <main class="hero-section">
+        <div class="item">
+            <h2>Search Engine</h2>
+            <p><form action="https://www.google.com/search" target="_blank">
+                <div><label for="google">Search Google</label></div>
+                <input id="google" type="text" name="q">
+            </form></p>
+            <p><form action="https://www.bing.com/search" role="search" target="_blank">
+                <div><label for="bing">Search Bing</label></div>
+                <input id="bing" type="text" name="q">
+            </form></p>  
+        </div><div class="wide item">
+            <h2>Frontend Challenges</h2>
+            <form class="mentorform" action="https://www.frontendmentor.io/challenges" target="_blank">
+                <div class="mentor">
+                <div class="frontendmentor"><h3>Type:</h3>
+                <label><input type="checkbox" name="type" value="free" checked >Free</label>
+                <label><input type="checkbox" name="type" value="free-plus" >Free+</label>
+                <label><input type="checkbox" name="type" value="premium" >Premium</label>
+                </div>
+                <div class="frontendmentor"><h3>Language:</h3>
+                <label><input type="checkbox" name="languages" value="CSS" checked >HTML&CSS</label>
+                <label><input type="checkbox" name="languages" value="JS" >JS</label>
+                <label><input type="checkbox" name="languages" value="API" >API</label>
+                </div>
+                <div class="frontendmentor"><h3>Difficulty:</h3>
+                <label><input type="checkbox" name="difficulty" value="1" checked >Newbie</label>
+                <label><input type="checkbox" name="difficulty" value="2" >Junior</label>
+                <label><input type="checkbox" name="difficulty" value="3" >Intermediate</label>
+                <label><input type="checkbox" name="difficulty" value="4" >Advanced</label>
+                <label><input type="checkbox" name="difficulty" value="5" >Guru</label>
+                </div>
+                <div class="frontendmentor"><h3>SortBy:</h3>
+                <label><input type="radio" name="sort" value="createdAt%7Casc" >Oldest to newest</label>
+                <label><input type="radio" name="sort" value="difficulty%7Casc" >Easiest to hardest</label>
+                <label><input type="radio" name="sort" value="difficulty%7Cdesc" >Hardest to easiest</label>
+                <label><input type="radio" name="sort" value="startedCount%7Cdesc" >Most popular</label>
+                <label><input type="radio" name="sort" value="startedCount%7Casc" >Least popular</label>
+                </div>
+                </div>
+                <input class="frontendbutton" type="submit" value="Search">
+            </form>
+        </div><div class="item">
+            <h2>Ecommerce</h2>
+            <p><form action="https://www.flipkart.com/search" role="search" target="_blank">
+                <div><label for="flipkart">Search Flipkart</label></div>
+                <input id="flipkart" type="text" name="q">
+            </form></p>    
+            <p><form action="https://www.amazon.in/s" role="search" target="_blank">
+                <div><label for="Amazon">Search Amazon</label></div>
+                <input id="Amazon" type="text" name="k">
+            </form></p> 
+        </div><div class="item">
+            <h2>CSS Examples W3Schools</h2>
+            <p><form action="https://www.w3schools.com/cssref/playdemo.php" target="_blank">
+                <div><label for="select_properties">Know about CSS Proprties</label></div>
+                <select id="select_properties" name="filename">
+                    <option value="playcss_accent-color">accent-color</option>
+                    <option value="playcss_align-content">align-content</option>
+                    <option value="playcss_align-items">align-items</option>
+                    <option value="playcss_align-self">align-self</option>
+                    <option value="playcss_animation">animation</option>
+                    <option value="playcss_aspect-ratio">aspect-ratio</option>
+                    <option value="playcss_backdrop-filter">backdrop-filter</option>
+                    <option value="playcss_background">background</option>
+                    <option value="playcss_background-blend-mode">background-blend-mode</option>
+                    <option value="playcss_background-clip">background-clip</option>
+                    <option value="playcss_background-color">background-color</option>
+                    <option value="playcss_background-image">background-image</option>
+                    <option value="playcss_background-origin">background-origin</option>
+                    <option value="playcss_background-position">background-position</option>
+                    <option value="playcss_background-position-x">background-position-x</option>
+                    <option value="playcss_background-position-y">background-position-y</option>
+                    <option value="playcss_background-repeat">background-repeat</option>
+                    <option value="playcss_background-size">background-size</option>
+                    <option value="playcss_block-size">block-size</option>
+                    <option value="playcss_border">border</option>
+                    <option value="playcss_border-block">border-block</option>
+                    <option value="playcss_border-block-color">border-block-color</option>
+                    <option value="playcss_border-block-end">border-block-end</option>
+                    <option value="playcss_border-block-end-color">border-block-end-color</option>
+                    <option value="playcss_border-block-end-style">border-block-end-style</option>
+                    <option value="playcss_border-block-end-width">border-block-end-width</option>
+                    <option value="playcss_border-block-start">border-block-start</option>
+                    <option value="playcss_border-block-start-color">border-block-start-color</option>
+                    <option value="playcss_border-block-start-style">border-block-start-style</option>
+                    <option value="playcss_border-block-start-width">border-block-start-width</option>
+                    <option value="playcss_border-block-style">border-block-style</option>
+                    <option value="playcss_border-block-width">border-block-width</option>
+                    <option value="playcss_border-bottom">border-bottom</option>
+                    <option value="playcss_border-bottom-color">border-bottom-color</option>
+                    <option value="playcss_border-bottom-left-radius">border-bottom-left-radius</option>
+                    <option value="playcss_border-bottom-right-radius">border-bottom-right-radius</option>
+                    <option value="playcss_border-bottom-style">border-bottom-style</option>
+                    <option value="playcss_border-bottom-width">border-bottom-width</option>
+                    <option value="playcss_border-collapse">border-collapse</option>
+                    <option value="playcss_border-color">border-color</option>
+                    <option value="playcss_border-end-end-radius">border-end-end-radius</option>
+                    <option value="playcss_border-end-start-radius">border-end-start-radius</option>
+                    <option value="playcss_border-image">border-image</option>
+                    <option value="playcss_border-image-outset">border-image-outset</option>
+                    <option value="playcss_border-image-repeat">border-image-repeat</option>
+                    <option value="playcss_border-image-slice">border-image-slice</option>
+                    <option value="playcss_border-image-source">border-image-source</option>
+                    <option value="playcss_border-image-width">border-image-width</option>
+                    <option value="playcss_border-inline">border-inline</option>
+                    <option value="playcss_border-inline-color">border-inline-color</option>
+                    <option value="playcss_border-inline-end">border-inline-end</option>
+                    <option value="playcss_border-inline-end-color">border-inline-end-color</option>
+                    <option value="playcss_border-inline-end-style">border-inline-end-style</option>
+                    <option value="playcss_border-inline-end-width">border-inline-end-width</option>
+                    <option value="playcss_border-inline-start">border-inline-start</option>
+                    <option value="playcss_border-inline-start-color">border-inline-start-color</option>
+                    <option value="playcss_border-inline-start-style">border-inline-start-style</option>
+                    <option value="playcss_border-inline-start-width">border-inline-start-width</option>
+                    <option value="playcss_border-inline-style">border-inline-style</option>
+                    <option value="playcss_border-inline-width">border-inline-width</option>
+                    <option value="playcss_border-left">border-left</option>
+                    <option value="playcss_border-left-color">border-left-color</option>
+                    <option value="playcss_border-left-style">border-left-style</option>
+                    <option value="playcss_border-left-width">border-left-width</option>
+                    <option value="playcss_border-radius">border-radius</option>
+                    <option value="playcss_border-right">border-right</option>
+                    <option value="playcss_border-right-color">border-right-color</option>
+                    <option value="playcss_border-right-style">border-right-style</option>
+                    <option value="playcss_border-right-width">border-right-width</option>
+                    <option value="playcss_border-spacing">border-spacing</option>
+                    <option value="playcss_border-start-end-radius">border-start-end-radius</option>
+                    <option value="playcss_border-start-start-radius">border-start-start-radius</option>
+                    <option value="playcss_border-style">border-style</option>
+                    <option value="playcss_border-top">border-top</option>
+                    <option value="playcss_border-top-color">border-top-color</option>
+                    <option value="playcss_border-top-left-radius">border-top-left-radius</option>
+                    <option value="playcss_border-top-right-radius">border-top-right-radius</option>
+                    <option value="playcss_border-top-style">border-top-style</option>
+                    <option value="playcss_border-top-width">border-top-width</option>
+                    <option value="playcss_border-width">border-width</option>
+                    <option value="playcss_bottom">bottom</option>
+                    <option value="playcss_box-reflect">box-reflect</option>
+                    <option value="playcss_box-shadow">box-shadow</option>
+                    <option value="playcss_box-sizing">box-sizing</option>
+                    <option value="playcss_caption-side">caption-side</option>
+                    <option value="playcss_clear">clear</option>
+                    <option value="playcss_clip">clip</option>
+                    <option value="playcss_clip-path">clip-path</option>
+                    <option value="playcss_color">color</option>
+                    <option value="playcss_column-count">column-count</option>
+                    <option value="playcss_column-fill">column-fill</option>
+                    <option value="playcss_column-gap">column-gap</option>
+                    <option value="playcss_column-rule">column-rule</option>
+                    <option value="playcss_column-rule-color">column-rule-color</option>
+                    <option value="playcss_column-rule-style">column-rule-style</option>
+                    <option value="playcss_column-rule-width">column-rule-width</option>
+                    <option value="playcss_column-span">column-span</option>
+                    <option value="playcss_column-width">column-width</option>
+                    <option value="playcss_columns">columns</option>
+                    <option value="playcss_direction">direction</option>
+                    <option value="playcss_display">display</option>
+                    <option value="playcss_empty-cells">empty-cells</option>
+                    <option value="playcss_filter">filter</option>
+                    <option value="playcss_flex">flex</option>
+                    <option value="playcss_flex-basis">flex-basis</option>
+                    <option value="playcss_flex-direction">flex-direction</option>
+                    <option value="playcss_flex-flow">flex-flow</option>
+                    <option value="playcss_flex-grow">flex-grow</option>
+                    <option value="playcss_flex-wrap">flex-wrap</option>
+                    <option value="playcss_float">float</option>
+                    <option value="playcss_font">font</option>
+                    <option value="playcss_font-family">font-family</option>
+                    <option value="playcss_font-feature-settings">font-feature-settings</option>
+                    <option value="playcss_font-kerning">font-kerning</option>
+                    <option value="playcss_font-size">font-size</option>
+                    <option value="playcss_font-style">font-style</option>
+                    <option value="playcss_font-variant">font-variant</option>
+                    <option value="playcss_font-variant-caps">font-variant-caps</option>
+                    <option value="playcss_font-weight">font-weight</option>
+                    <option value="playcss_gap">gap</option>
+                    <option value="playcss_grid">grid</option>
+                    <option value="playcss_grid-area">grid-area</option>
+                    <option value="playcss_grid-auto-columns">grid-auto-columns</option>
+                    <option value="playcss_grid-auto-flow">grid-auto-flow</option>
+                    <option value="playcss_grid-auto-rows">grid-auto-rows</option>
+                    <option value="playcss_grid-column">grid-column</option>
+                    <option value="playcss_grid-column-end">grid-column-end</option>
+                    <option value="playcss_grid-column-gap">grid-column-gap</option>
+                    <option value="playcss_grid-column-start">grid-column-start</option>
+                    <option value="playcss_grid-gap">grid-gap</option>
+                    <option value="playcss_grid-row">grid-row</option>
+                    <option value="playcss_grid-row-end">grid-row-end</option>
+                    <option value="playcss_grid-row-gap">grid-row-gap</option>
+                    <option value="playcss_grid-row-start">grid-row-start</option>
+                    <option value="playcss_grid-template">grid-template</option>
+                    <option value="playcss_grid-template-areas">grid-template-areas</option>
+                    <option value="playcss_grid-template-columns">grid-template-columns</option>
+                    <option value="playcss_grid-template-rows">grid-template-rows</option>
+                    <option value="playcss_height">height</option>
+                    <option value="playcss_hyphens">hyphens</option>
+                    <option value="playcss_hyphenate-character">hyphenate-character</option>
+                    <option value="playcss_image-rendering">image-rendering</option>
+                    <option value="playcss_inline-size">inline-size</option>
+                    <option value="playcss_inset">inset</option>
+                    <option value="playcss_inset-block">inset-block</option>
+                    <option value="playcss_inset-block-end">inset-block-end</option>
+                    <option value="playcss_inset-block-start">inset-block-start</option>
+                    <option value="playcss_inset-inline">inset-inline</option>
+                    <option value="playcss_inset-inline-end">inset-inline-end</option>
+                    <option value="playcss_inset-inline-start">inset-inline-start</option>
+                    <option value="playcss_justify-content">justify-content</option>
+                    <option value="playcss_justify-items">justify-items</option>
+                    <option value="playcss_justify-self">justify-self</option>
+                    <option value="playcss_left">left</option>
+                    <option value="playcss_letter-spacing">letter-spacing</option>
+                    <option value="playcss_line-height">line-height</option>
+                    <option value="playcss_list-style">list-style</option>
+                    <option value="playcss_list-style-image">list-style-image</option>
+                    <option value="playcss_list-style-position">list-style-position</option>
+                    <option value="playcss_list-style-type">list-style-type</option>
+                    <option value="playcss_margin">margin</option>
+                    <option value="playcss_margin-block">margin-block</option>
+                    <option value="playcss_margin-block-end">margin-block-end</option>
+                    <option value="playcss_margin-block-start">margin-block-start</option>
+                    <option value="playcss_margin-bottom">margin-bottom</option>
+                    <option value="playcss_margin-inline">margin-inline</option>
+                    <option value="playcss_margin-inline-end">margin-inline-end</option>
+                    <option value="playcss_margin-inline-start">margin-inline-start</option>
+                    <option value="playcss_margin-left">margin-left</option>
+                    <option value="playcss_margin-right">margin-right</option>
+                    <option value="playcss_margin-top">margin-top</option>
+                    <option value="playcss_max-block-size">max-block-size</option>
+                    <option value="playcss_max-inline-size">max-inline-size</option>
+                    <option value="playcss_min-block-size">min-block-size</option>
+                    <option value="playcss_min-inline-size">min-inline-size</option>
+                    <option value="playcss_min-height">min-height</option>
+                    <option value="playcss_min-width">min-width</option>
+                    <option value="playcss_mix-blend-mode">mix-blend-mode</option>
+                    <option value="playcss_object-fit">object-fit</option>
+                    <option value="playcss_object-position">object-position</option>
+                    <option value="playcss_opacity">opacity</option>
+                    <option value="playcss_order">order</option>
+                    <option value="playcss_outline">outline</option>
+                    <option value="playcss_outline-color">outline-color</option>
+                    <option value="playcss_outline-offset">outline-offset</option>
+                    <option value="playcss_outline-style">outline-style</option>
+                    <option value="playcss_outline-width">outline-width</option>
+                    <option value="playcss_overflow">overflow</option>
+                    <option value="playcss_overflow-wrap">overflow-wrap</option>
+                    <option value="playcss_overflow-x">overflow-x</option>
+                    <option value="playcss_overflow-y">overflow-y</option>
+                    <option value="playcss_padding">padding</option>
+                    <option value="playcss_padding-block">padding-block</option>
+                    <option value="playcss_padding-block-end">padding-block-end</option>
+                    <option value="playcss_padding-block-start">padding-block-start</option>
+                    <option value="playcss_padding-bottom">padding-bottom</option>
+                    <option value="playcss_padding-inline">padding-inline</option>
+                    <option value="playcss_padding-inline-end">padding-inline-end</option>
+                    <option value="playcss_padding-inline-start">padding-inline-start</option>
+                    <option value="playcss_padding-left">padding-left</option>
+                    <option value="playcss_padding-right">padding-right</option>
+                    <option value="playcss_padding-top">padding-top</option>
+                    <option value="playcss_paint-order">paint-order</option>
+                    <option value="playcss_perspective">perspective</option>
+                    <option value="playcss_perspective-origin">perspective-origin</option>
+                    <option value="playcss_place-content">place-content</option>
+                    <option value="playcss_place-items">place-items</option>
+                    <option value="playcss_place-self">place-self</option>
+                    <option value="playcss_quotes">quotes</option>
+                    <option value="playcss_right">right</option>
+                    <option value="playcss_rotate">rotate</option>
+                    <option value="playcss_row-gap">row-gap</option>
+                    <option value="playcss_scale">scale</option>
+                    <option value="playcss_tab-size">tab-size</option>
+                    <option value="playcss_table-layout">table-layout</option>
+                    <option value="playcss_text-align">text-align</option>
+                    <option value="playcss_text-align-last">text-align-last</option>
+                    <option value="playcss_text-decoration">text-decoration</option>
+                    <option value="playcss_text-decoration-color">text-decoration-color</option>
+                    <option value="playcss_text-decoration-line">text-decoration-line</option>
+                    <option value="playcss_text-decoration-style">text-decoration-style</option>
+                    <option value="playcss_text-emphasis">text-emphasis</option>
+                    <option value="playcss_text-emphasis-color">text-emphasis-color</option>
+                    <option value="playcss_text-emphasis-position">text-emphasis-position</option>
+                    <option value="playcss_text-emphasis-style">text-emphasis-style</option>
+                    <option value="playcss_text-indent">text-indent</option>
+                    <option value="playcss_text-orientation">text-orientation</option>
+                    <option value="playcss_text-overflow">text-overflow</option>
+                    <option value="playcss_text-shadow">text-shadow</option>
+                    <option value="playcss_text-transform">text-transform</option>
+                    <option value="playcss_text-underline-offset">text-underline-offset</option>
+                    <option value="playcss_text-underline-position">text-underline-position</option>
+                    <option value="playcss_top">top</option>
+                    <option value="playcss_transform">transform</option>
+                    <option value="playcss_transform-origin">transform-origin</option>
+                    <option value="playcss_transform-style">transform-style</option>
+                    <option value="playcss_translate">translate</option>
+                    <option value="playcss_unicode-bidi">unicode-bidi</option>
+                    <option value="playcss_vertical-align">vertical-align</option>
+                    <option value="playcss_visibility">visibility</option>
+                    <option value="playcss_white-space">white-space</option>
+                    <option value="playcss_width">width</option>
+                    <option value="playcss_word-break">word-break</option>
+                    <option value="playcss_word-spacing">word-spacing</option>
+                    <option value="playcss_word-wrap">word-wrap</option>
+                    <option value="playcss_writing-mode">writing-mode</option>
+                    <option value="playcss_z-index">z-index</option>
+                    <option value="playcss_zoom">zoom</option>
+                </select><br><br>
+                <div><input type="submit" value="Show"></div>
+            </form></p>
+        </div><div class="item">
+            <h2>Facebook and Youtube</h2>   
+            <p><form action="https://www.facebook.com/search/top/" target="_blank">
+                <div><label for="fb">Search Facebook</label></div>
+                <input id="fb" type="text" name="q">
+            </form></p>
+            <p><form action="https://www.youtube.com/results" target="_blank">
+                <div><label for="YT">Search YouTube</label></div>
+                <input id="YT" type="text" name="search_query">
+            </form></p>
+        </div><div class="item">
+            <h2>Google Translator</h2>
+            <p><form action="https://translate.google.com" target="_blank">
+                <input type="hidden" name="hl" value="en" >
+                <input type="hidden" name="tab" value="TT" >
+                <input type="hidden" name="sl" value="auto" >
+                <input type="hidden" name="tl" value="ne" >
+                <div><label for="nepali">Translate to Nepali</label></div>
+                <input id="nepali" type="text" name="text">
+                <input type="hidden" name="op" value="translate" >
+            </form></p>
+        </div>
+    </main>
     <p><form action="https://mail.google.com/mail/u/0/" role="search" hidden>
         <div><label for="mail">Search Mail</label></div>
         <input id="mail" type="text" name="q">
